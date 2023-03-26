@@ -30,9 +30,7 @@ This is a tools to check the availability of Web-Based Software.
 
 <img src="Screenshots/10.JPG"/>
 
-<img src="Screenshots/6.jpg"/>
-
-<img src="Screenshots/7.jpg"/>
+<img src="Screenshots/6.jpg"/> | <img src="Screenshots/7.jpg"/>
 
 <img src="Screenshots/8.jpg"/>
 
