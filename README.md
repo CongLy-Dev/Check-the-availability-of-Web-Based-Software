@@ -2,26 +2,13 @@
 This is a tools to check the availability of Web-Based Software.
 ## Features of this Project
 
-### I. Admin Users Can
-1. See Overall Summary Charts of Students Performances, Staff Performances, Courses, Subjects, Leave, etc.
-2. Manage Teachers (Add or Upload from CSV file, Update and Delete)
-3. Manage Students (Add or Upload from CSV file, Update and Delete)
-4. Manage Department (Add, Update and Delete)
-5. Manage Major (Add, Update and Delete)
-6. Manage Class (Add, Update and Delete)
-7. Manage Subjects (Add, Update and Delete)
-8. Manage Sessions (Add, Update and Delete)
-9. Manage Assign (Add, Update and Delete)
-10. View Student Attendance
-11. Review and Reply Student/Staff Feedback
-12. Review (Approve/Reject) Student/Staff Leave
+1. Login with Username and Password
+2. Manage Host (Add, Update and Delete)
+3. Reload Check
+4. Set time Reload Check
+5. Search Host
+6. Send message to Email and Telegram when Web-Based change status
 
-### II. Teachers Can
-1. See the Overall Summary Charts related to their students, their subjects, leave status, etc.
-2. Take/Update Students Attendance
-3. Add/Update Result
-4. Apply for Leave
-5. Send Feedback to Trainning Department
 
 
 ## ScreenShots
