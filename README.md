@@ -36,7 +36,8 @@ This is a tools to check the availability of Web-Based Software.
 
 <img src="Screenshots/8.jpg"/>
 
-<img src="Screenshots/1.jpg"/>
+<img src="Srceenshots/1.jpg"/>
+
 
 <img src="Screenshots/3.jpg"/>
 
