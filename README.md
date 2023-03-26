@@ -95,7 +95,7 @@ $  git clone https://github.com/CongLy-Dev/Student-Management-System-Using-Djang
 
 Then, Enter the project
 ```
-$  cd Student-Management-System-Using-Django
+$  cd mysite
 ```
 
 **4. Install Requirements from 'requirements.txt'**
