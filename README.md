@@ -26,11 +26,25 @@ This is a tools to check the availability of Web-Based Software.
 
 ## ScreenShots
 
-<img src="Screenshots/1.jpg"/>
+<img src="Screenshots/9.jpg"/>
+
+<img src="Srceenshots/10.JPG"/>
+
+<img src="Screenshots/6.jpg"/>
+
+<img src="Screenshots/7.jpg"/>
+
+<img src="Screenshots/8.jpg"/>
+
+<img src="Srceenshots/1.jpg"/>
+
+<img src="Screenshots/3.jpg"/>
+
+<img src="Screenshots/4.jpg"/>
+
+<img src="Screenshots/5.jpg"/>
 
 <img src="Screenshots/2.jpg"/>
-
-<img src="Screenshots/st.jpg"/>
 
 ## Install and Run this project
 
@@ -90,7 +104,7 @@ $  source bin/activate
 
 **3. Clone this project**
 ```
-$  git clone https://github.com/CongLy-Dev/Student-Management-System-Using-Django.git
+$  git clone https://github.com/CongLy-Dev/Check-the-availability-of-Web-Based-Software.git
 ```
 
 Then, Enter the project
@@ -132,7 +146,7 @@ $ python3 manage.py runserver
 
 **7. Login Credentials**
 
-Create Super User (HOD)
+Create Super User (Admin)
 Command for PC:
 ```
 $  python manage.py createsuperuser
