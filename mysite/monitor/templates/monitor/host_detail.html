@@ -1,0 +1,89 @@
+{% extends "monitor/base.html" %}
+
+{% block title %} Thông tin Host - Công cụ kiểm tra tính khả dụng của phần mềm nền Web {% endblock %}
+
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<a hidden class="container-fluid d-grid gap-2 d-md-flex justify-content-md-end py-1" id="quiz-time-left"></a>
+<div class="table-responsive container-fluid">
+    <div class="ui message {{ host.get_status_display }}">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center py-1">
+            <a type="button" class="btn btn-success" href="{% url 'monitor:update_host' host.id %}">Edit Host</a>
+            <a type="button" class="btn btn-danger" href="{% url 'monitor:delete_host' host.id %}">Xóa</a>
+            <a type="button" class="btn btn-primary" href="{% url 'monitor:host' %}">Trở lại</a>
+        </div>
+        <div class="ui segment">
+            <h4 class="ui header">
+                <i class="bar chart icon"></i>
+                Mô tả
+            </h4>
+            <table class="ui very compact definition table">
+                <tbody>
+                <tr>
+                    <td class="four wide column">Tên Host</td>
+                    <td>{{ host.name }}</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>{{ host.address }}</td>
+                </tr>
+                <tr>
+                    <td>Port</td>
+                    <td>{{ host.port }}</td>
+                </tr>
+                <tr>
+                    <td>Trạng thái</td>
+                    <td>{{ host.status_info }}</td>
+                </tr>
+                <tr>
+                    <td>Thay đổi trạng thái gần nhất</td>
+                    <td>{{ host.last_status_change|date:"H:i - d/m/y " }}</td>
+                </tr>
+                <tr>
+                    <td>Kiểm tra gần nhất</td>
+                    <td>{{ host.last_check|date:"H:i - d/m/y " }}</td>
+                </tr>
+                <tr>
+                    <td>Thông tin khác</td>
+                    <td>{{ host.description }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive ui segment">
+            <h4 class="ui header">
+                <i class="database icon"></i>
+                Nhật ký Host
+            </h4>
+            <table class="ui very compact single line table">
+                <tbody>
+                {% if host.hostlog_set.count > 0 %}
+                <thead>
+                <td><strong>Thông tin trạng thái</strong></td>
+                <td><strong>Thay đổi trạng thái gần nhất</strong></td>
+                </thead>
+                {% for log in host.hostlog_set.all|dictsortreversed:"status_change" %}
+                <tr class="{{ log.get_status_display }}">
+                    <td>{{ log.status_info }}</td>
+                    <td>{{ log.status_change|date:"H:i - d/m/y " }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td><span>Chưa có nhật ký nào được đăng ký</span></td>
+                </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--<div><canvas id="myChart"></canvas></div>-->
+<div class="container-fluid">
+<canvas id="myChart"></canvas>
+    <canvas id="scatterChart"></canvas>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+{% endblock %}

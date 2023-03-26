@@ -1,0 +1,118 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'monitor/css/bootstrap.css' %}"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- Website Font style -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<!-- Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <div class="navbar-light text-center" style="background-color: #007bfe;">
+        <div class="rounded mx-auto d-block">
+            <a href="/login" class="login">
+                <img src="{% static 'monitor/images/header.png' %}" class="img-fluid" alt="">
+            </a>
+        </div>
+    </div>
+</head>
+{% block content %}
+<!------ Include the above in your HEAD tag ---------->
+<title>Đăng nhập - Công cụ kiểm tra tính khả dụng của phần mềm nền Web</title>
+<html lang="en">
+<body>
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-5 mx-auto">
+                    <!-- form card login -->
+                    <div class="card rounded-0" id="login-form">
+                        <div class="card-header text-center">
+                            <h3><strong class="title">Đăng nhập hệ thống</strong></h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="" class="needs-validation" novalidate method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa"
+                                                                               aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="username" id="username"
+                                                   placeholder="Username" required>
+                                            <div class="invalid-feedback">Vui lòng nhập Username.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg"
+                                                                               aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="password" id="password"
+                                                   placeholder="Mật khẩu" required>
+                                            <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if messages %}
+                                {% for message in messages %}
+                                <div class="alert alert-danger">
+                                    {{ message }}
+                                </div>
+                                {% endfor %}
+                                {% endif %}
+                                <div class="form-group ">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block login-button"
+                                            style="background-color: #007bfe">Đăng nhập
+                                    </button>
+                                </div>
+                            </form>
+                            <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
+                                    }, false);
+                                })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<footer class="bg-light text-center text-lg-start fixed-bottom clearfix">
+    <!-- Copyright -->
+    <div class="text-center p-3">
+        <div id="information"><strong>Đơn vị quản lý</strong>: Sở Thông Tin và Truyền Thông thành phố Cần Thơ<br>
+            Mọi vướng mắc xin vui lòng liên hệ: Trung tâm Công Nghệ Thông Tin và Truyền Thông<br>
+            Email: baotriqlvb@cantho.gov.vn - Điện thoại: 02923.762.333
+        </div>
+    </div>
+    <!-- Copyright -->
+</footer>
+{% endblock %}

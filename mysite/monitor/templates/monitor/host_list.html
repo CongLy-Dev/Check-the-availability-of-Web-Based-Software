@@ -1,0 +1,79 @@
+{% if host_list %}
+<table class="container-fluid table-responsive ui fixed single line very compact large selectable table">
+  <thead>
+    <tr>
+      <td class="two wide"><strong>Địa chỉ IP/Tên miền</strong></td>
+      <td class="two wide"><strong>Port</strong></td>
+      <td class="two wide"><strong>Tên Host</strong></td>
+      <td class="two wide"><strong>Trạng thái</strong></td>
+      <td class="three wide"><strong>Thay đổi trạng thái gần nhất</strong></td>
+      <td class="two wide"><strong>Kiểm tra gần nhất</strong></td>
+      <td class="two wide center aligned"><strong>Tác vụ</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for host in hosts %}
+    <tr class="{{ host.get_status_display }}">
+      <td class="selectable">
+        <a href="{% url 'monitor:host_detail' host.id %}"><strong>{{ host.address }}</strong></a>
+      </td>
+      <td class="selectable">
+        <a href="{% url 'monitor:host_detail' host.id %}"><strong>{{ host.port }}</strong></a>
+      </td>
+      <td class="selectable">
+        <a href="{% url 'monitor:host_detail' host.id %}"><strong>{{ host.name|upper }}</strong></a>
+      </td>
+      <td class="selectable">
+        <a href="{% url 'monitor:host_detail' host.id %}">
+          {% if host.status < host.WARNING %}
+          <i class="bi bi-check-circle-fill"></i>
+          {% else %}
+          <i class="bi bi-x-circle-fill"></i>
+          {% endif %}
+          <strong>{{ host.status_info }}</strong>
+        </a>
+      </td>
+      <td class="selectable center aligned">
+        <a
+          href="{% url 'monitor:host_detail' host.id %}"><strong>{{ host.last_status_change|date:"H:i - d/m/y " }}</strong></a>
+      </td>
+      <td class="selectable center aligned">
+        <a href="{% url 'monitor:host_detail' host.id %}"><strong>{{ host.last_check|date:"H:i - d/m/y " }}</strong></a>
+      </td>
+      </td>
+      {% if request.user.is_staff %}
+      <td class="center aligned">
+        <a type="button" class="btn btn-outline-danger" href="{% url 'monitor:reload_host' host.id %}">Check</a>
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!--{{ hosts }}<br/>-->
+<!--Has Previous: {{ hosts.has_previous }}<br/>-->
+<!--Has Next: {{ hosts.has_next }}<br/>-->
+<!--Current Page: {{ hosts.number }}<br/>-->
+<!--Number of Pages: {{ hosts.paginator.num_pages }}<br/>-->
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+{% if hosts.has_previous %}
+<li class="page-item"><a class="page-link" href="?page=1">&laquo Đầu</a></li>
+<li class="page-item"><a class="page-link" href="?page={{ hosts.previous_page_number }}">Trước</a></li>
+{% endif %}
+<!--Page {{ hosts.number }} of {{ hosts.paginator.num_pages }}-->
+{% for i in nums %}
+    <li class="page-item"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+    {% endfor %}
+
+
+{% if hosts.has_next %}
+<li class="page-item"><a class="page-link" href="?page={{ hosts.next_page_number }}">Kế tiếp</a></li>
+<li class="page-item"><a class="page-link" href="?page={{ hosts.paginator.num_pages }}">Cuối &raquo</a></li>
+{% endif %}
+{% else %}
+<p>Không có máy chủ.</p>
+  </ul>
+</nav>
+{% endif %}

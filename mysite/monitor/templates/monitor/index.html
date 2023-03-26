@@ -1,0 +1,62 @@
+{% extends "monitor/base.html" %}
+
+{% block title %}Giới thiệu - Công cụ kiểm tra tính khả dụng của phần mềm nền Web{% endblock %}
+
+{% load static %}
+
+{% block content %}
+{% csrf_token %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container-fluid">
+<table class="text-justify" style="height: 159px; width: 650px; margin-left: auto; margin-right: auto;" border="0" align="center">
+<tbody>
+<tr>
+<td style="text-align: center;"><span style="color: #000000;">&nbsp;<img src="{% static 'monitor/images/logo_trungtam.png' %}" alt="" width="81" height="88" style="width: 100%; max-width: 81px; height: auto;"></span></td>
+<td style="text-align: center;">
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%;"><strong><span lang="VI" style="font-size: 10pt; line-height: 150%; font-family: Arial, sans-serif;">SỞ THÔNG TIN VÀ TRUYỀN THÔNG THÀNH PHỐ CẦN THƠ</span></strong></p>
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%;"><strong><span lang="VI" style="font-size: 10pt; line-height: 150%; font-family: Arial, sans-serif;">&nbsp; &nbsp; &nbsp;TRUNG TÂM CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG CẦN THƠ</span></strong></p>
+<hr>
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%; text-align: center;"><span style="font-size: 10pt; line-height: 150%; font-family: Arial, sans-serif; color: #000000;">Trụ sở chính: Số 29 Cách Mạng Tháng 8, Phường Thới Bình, Quận Ninh Kiều, TPCT</span></p>
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%; text-align: center;"><span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;">Trụ sở 2: 3B Nguyễn Trãi, Phường An Hội, Quận Ninh Kiều, TPCT</span></p>
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%; text-align: center;"><span style="font-size: 10pt; line-height: 150%; font-family: Arial, sans-serif; color: #000000;"><strong>ĐT:</strong> 02923 690 888&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Fax:</strong> 08 07 12 13</span></p>
+<p style="margin-top: 6pt; margin-right: 0in; margin-bottom: 0.0001pt; line-height: 150%; text-align: center;"><span style="font-size: 10pt; line-height: 150%; font-family: Arial, sans-serif; color: #000000;"><strong>Website:</strong>&nbsp;http://<a href="http://www.ctict.cantho.gov.vn/"><span style="color: #000000; text-decoration: none;">ctict.cantho.gov.vn </span></a>&nbsp; &nbsp; &nbsp; &nbsp; <strong>Email:</strong> <span id="cloak99568309913d97b50bfa618adb4ea78d"><a href="mailto:ctict@cantho.gov.vn"><span style="color: #000000; text-decoration: none;">ctict@cantho.gov.vn</span></a></span><script type="text/javascript">
+				document.getElementById('cloak99568309913d97b50bfa618adb4ea78d').innerHTML = '';
+				var prefix = 'ma' + 'il' + 'to';
+				var path = 'hr' + 'ef' + '=';
+				var addy99568309913d97b50bfa618adb4ea78d = 'ctict' + '@';
+				addy99568309913d97b50bfa618adb4ea78d = addy99568309913d97b50bfa618adb4ea78d + 'cantho' + '.' + 'gov' + '.' + 'vn';
+				var addy_text99568309913d97b50bfa618adb4ea78d = '<span style="color: #000000; text-decoration: none;">ctict' + '@' + 'cantho' + '.' + 'gov' + '.' + 'vn</span>';document.getElementById('cloak99568309913d97b50bfa618adb4ea78d').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy99568309913d97b50bfa618adb4ea78d + '\'>'+addy_text99568309913d97b50bfa618adb4ea78d+'<\/a>';
+		</script> </span></p>
+</td>
+</tr>
+</tbody>
+</table>
+    <p class="text-justify">
+        Trung tâm Công nghệ thông tin và Truyền thông là đơn vị sự nghiệp trực thuộc Sở Thông tin và Truyền thông, có
+        chức năng giúp Giám đốc Sở thực hiện các nhiệm vụ sự nghiệp phục vụ cho công tác quản lý nhà nước về công nghệ
+        thông tin và truyền thông trên địa bàn thành phố; trực tiếp quản lý, vận hành trung tâm dữ liệu, hạ tầng kỹ
+        thuật công nghệ thông tin các ứng dụng và cơ sở dữ liệu dùng chung của Ủy ban nhân dân thành phố thành phố phục
+        vụ cho việc xây dựng Chính quyền điện tử thành phố và phát triển đô thị thông minh; thực hiện các nhiệm vụ về
+        đảm bảo an toàn và an ninh thông tin mạng, ứng cứu sự cố máy tính trong các cơ quan nhà nước; tổ chức nghiên
+        cứu, thiết kế, xây dựng chương trình, đề án, dự án và ứng dụng các tiến bộ khoa học, kỹ thuật, công nghệ về lĩnh
+        vực thông tin, truyền thông, xuất bản và báo chí theo đúng mục tiêu, nhiệm vụ, tiến độ đã được cơ quan thẩm
+        quyền phê duyệt; tổ chức đào tạo, bồi dưỡng kiến thức, kỹ năng về lĩnh vực công nghệ thông tin và truyền thông;
+        cung cấp các dịch vụ trong lĩnh vực thông tin và truyền thông cho các tổ chức, cá nhân có nhu cầu.</p>
+    <p class="text-justify">
+        Trung tâm Công nghệ thông tin và Truyền thông (sau đây gọi tắt là Trung tâm) là đơn vị sự nghiệp có thu, được
+        ngân sách đảm bảo một phần chi phí hoạt động thường xuyên, có tư cách pháp nhân, được phép sử dụng con dấu và
+        tài khoản riêng.</p>
+    <p>Tên giao dịch: <span><strong>Trung tâm Công nghệ thông tin và Truyền thông Cần Thơ.</strong></span></p>
+    <p>Tên giao dịch quốc tế: <span><strong>Cantho Information and Communication Technology Center.</strong></span></p>
+    <p><span>Tên viết tắt: <strong>CTICT.</strong></span>
+    </p>
+<div class="container-fluid d-grid gap-2 d-md-flex justify-content-md-end py-1" id="quiz-time-left"></div>
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends "monitor/base.html" %}
+
+{% block title %}Set time - Công cụ kiểm tra tính khả dụng của phần mềm nền Web{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container-fluid d-grid gap-2 d-md-flex justify-content-md-end py-1" id="quiz-time-left"></div>
+<body>
+<div class="container-fluid py-3">
+    <h3 class="text-center">Set time</h3>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center py-1">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center py-1">
+                <button type="submit" class="btn btn-success">Set time</button>
+                <a type="button" class="btn btn-primary" href="{% url 'monitor:host' %}">Trở lại</a>
+                <p type="button" class="btn btn-primary" onclick="a()">Reset</p>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

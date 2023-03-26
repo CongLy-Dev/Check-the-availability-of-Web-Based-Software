@@ -1,0 +1,22 @@
+{% extends "monitor/base.html" %}
+{% block title %}Xóa Host - Công cụ kiểm tra tính khả dụng của phần mềm nền Web{% endblock %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container-fluid">
+    <div class="alert alert-warning" role="alert">
+        <p>Bạn có chắc chắn muốn xóa máy chủ <strong>{{ name|upper }}</strong> không?</p>
+    </div>
+    <form action="{% url 'monitor:delete_host' name.id %}" method="POST">
+        {% csrf_token %}
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center py-1">
+            <button type="submit" class="btn btn-danger">Có, hãy xóa</button>
+            <button class="btn btn-primary" onclick="history.back()">Trở lại</button>
+        </div>
+    </form>
+</div>
+</html>
+{% endblock %}
