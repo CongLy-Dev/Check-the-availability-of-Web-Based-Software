@@ -30,19 +30,13 @@ This is a tools to check the availability of Web-Based Software.
 
 <img src="Screenshots/10.JPG"/>
 
-<img src="Screenshots/6.jpg"/> | <img src="Screenshots/7.jpg"/>
+|<img src="Screenshots/6.jpg"/>|<img src="Screenshots/7.jpg"/>|
 
-<img src="Screenshots/8.jpg"/>
+|<img src="Screenshots/8.jpg"/>|<img src="Srceenshots/1.jpg"/>|
 
-<img src="Srceenshots/1.jpg"/>
+|<img src="Screenshots/3.jpg"/>|<img src="Screenshots/4.jpg"/>|
 
-<img src="Screenshots/3.jpg"/>
-
-<img src="Screenshots/4.jpg"/>
-
-<img src="Screenshots/5.jpg"/>
-
-<img src="Screenshots/2.jpg"/>
+|<img src="Screenshots/5.jpg"/>|<img src="Screenshots/2.jpg"/>|
 
 ## Install and Run this project
 
