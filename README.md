@@ -90,7 +90,7 @@ $  source bin/activate
 
 **3. Clone this project**
 ```
-$  git clone https://github.com/CongLy-Dev/Student-Management-System-Using-Django.git
+$  git clone https://github.com/CongLy-Dev/Check-the-availability-of-Web-Based-Software.git
 ```
 
 Then, Enter the project
@@ -132,7 +132,7 @@ $ python3 manage.py runserver
 
 **7. Login Credentials**
 
-Create Super User (HOD)
+Create Super User (Admin)
 Command for PC:
 ```
 $  python manage.py createsuperuser
